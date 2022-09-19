@@ -1,0 +1,79 @@
+body{
+	background-color: #000000;
+	font-family: sans-serif;
+}
+
+.box{
+	max-width: 700px;
+	border:10px solid  #eaeaea;
+	margin:80px auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.box .left-slide,.box .right-slide{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #000000;
+  border-radius: 50%;
+  color:#ffffff;
+  font-size: 20px;
+  top:50%;
+  cursor: pointer;
+  margin-top: -20px;
+  text-align: center;
+  line-height: 40px;
+  
+}
+.box .left-slide:hover,.box .right-slide:hover{
+ box-shadow: 0px 0px 10px black;
+ background-color: #e22929;
+}
+
+.box .left-slide{
+	left: 30px;
+}
+.box .right-slide{
+	right: 30px;
+}
+.box .box-items .item img{
+	max-width: 100%;
+	display: block;
+	animation:zoom 1s ease;
+}
+
+@keyframes zoom{
+	0%{transform: scale(2);opacity: 0}
+	50%{transform: scale(2);}
+	100%{transform: scale(1);opacity:1}
+}
+.box .box-items .item{
+	display: none;
+	position: relative;
+}
+.box .box-items .item .caption{
+position: absolute;
+width: 100%;
+height: 60px;
+bottom: 0px;
+left: 0px;
+background-color: rgba(0,0,0,.5);
+line-height: 60px;
+text-align: center;
+color: #ffffff;
+font-size: 30px;
+
+}
+
+.box .box-items .item.active{
+	display: block;
+}
+
+
+
+
+
+
+
+
